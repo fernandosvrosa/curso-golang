@@ -24,7 +24,7 @@ func main() {
 
 	for rows.Next() {
 		var u usuario
-		rows.Scan(&u.id, &u.nome)
+		_ = rows.Scan(&u.id, &u.nome)
 		fmt.Println(u)
 	}
 }
